@@ -7,14 +7,14 @@ This computes the word ladder distance between pairs of 6-letter words in a give
 So, the word ladder distance between rip and tar is 3.
 
 ### Example six-letter word paths:
-*NOTE: these are on a given, non-comprehensive 6-letter word dictionary. Distances might not be the actual word ladder distances on the full dictionary*
+*NOTE: these are on a given, non-comprehensive 6-letter word dictionary. Distances might not be the actual word ladder distances on the full OED.*
 
 | Start -- End    | Distance | Path                                                            | Time (s) |
 | ----------------|----------| ----------------------------------------------------------------|-----|
-| clucks -- spider| 6        | clucks clicks slicks slices slicer slider spider                |0.007|
-| slider -- gasket| 18       | slider slides slimes climes climbs climes chimes chimps chumps clumps</br> plumps plumes pluses pauses passes basses basset basket gasket                                                             |0.036|
-| hither -- yonder| 22       | yonder bonder bolder solder solver solves wolves solves solver salver</br> salter falter fatter fetter better beater beaver braver brayer prayer</br> player planer planar                                        |0.061|
-| abates -- anemia| -        | no possible path                                                |0.640|
+| bellow -- hollow|  4       | hollow follow fellow bellow                                     |0.002|
+| slider -- gasket| 11       | gasket basket basked balked balled bulled gulled guiled guided</br> guider glider slider                                                                                                                |0.295|
+| vaguer -- drifts| 22       | drifts drafts grafts grants grunts gaunts taunts taints saints stints</br> stilts stiles smiles smiled sailed bailed balled called calved</br> valved valued valuer vaguer                            |0.459|
+| abates -- anemia| -        | no possible path                                                |0.473|
 
 ### Informed A* search optimization:
 + Blind search: classic BFS, explores every "child" (word with only one letter transposed from parent) until it reaches the goal word.
