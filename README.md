@@ -4,7 +4,7 @@ This computes the word ladder distance between pairs of 6-letter words in a give
   rip --> rap</br>
   rap --> tap</br>
   tap --> tar</br>
-So, the word ladder distance between rip and tar is 3.
+So, the word ladder distance between rip and tar is 2.
 
 ### Example six-letter word paths:
 *NOTE: these are on a given, non-comprehensive 6-letter word dictionary. Distances might not be the actual word ladder distances on the full OED.*
