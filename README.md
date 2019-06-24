@@ -16,7 +16,7 @@ So, the word ladder distance between rip and tar is 3.
 | vaguer -- drifts| 22       | drifts drafts grafts grants grunts gaunts taunts taints saints stints</br> stilts stiles smiles smiled sailed bailed balled called calved</br> valved valued valuer vaguer                            |0.459|
 | abates -- anemia| -        | no possible path                                                |0.473|
 
-### Informed A* search optimization:
+## Informed A* search optimization:
 + Blind search: classic BFS, explores every "child" (word with only one letter transposed from parent) until it reaches the goal word.
 + Informed search: Uses h(A), an estimate of current node cost to goal, to prioritize child nodes to explore first.
   + Orders fringe by h(A)
@@ -34,3 +34,20 @@ Claim: A is optimal goal state; G is suboptimal goal state. f(B) < f(A).</br>
   F(A) = c(A) + 0</br>
   F(A) > C(G)</br>
   F(B) = c(B) + h(B) ≤ c(G) < f(A) </br>
+
+## Iterations
+Base-level: (unoptimized)
+<ul>
+  <li>Find all words in dictionary that are distance = 1 away from current state, add to fringe.</li>
+  <li>Repeat for each word</li>
+  <li>Arrive at goal state</li>
+</ul>
+
+Path abandonment:
+<ul>
+  <li>If a word has already been "observed"/has had its children added to the search already, do not "observe" it again (knowledgeable fringe)</li>
+  <li> Maintain a bounded depth at an arbitrary depth *d*; for paths longer than *d*, this would never find a solution. For paths shorter than *d*, this would reduce search time by avoiding any searches longer than necessary.</li>
+</ul>
+
+Bidirectional Search: Search from both start and end words, eliminating search through mid-depth paths that won't result in goal state.
+
