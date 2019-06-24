@@ -46,7 +46,7 @@ Base-level: (unoptimized)
 Path abandonment:
 <ul>
   <li>If a word has already been "observed"/has had its children added to the search already, do not "observe" it again (knowledgeable fringe)</li>
-  <li> Maintain a bounded depth at an arbitrary depth *d*; for paths longer than *d*, this would never find a solution. For paths shorter than *d*, this would reduce search time by avoiding any searches longer than necessary.</li>
+  <li> Maintain a bounded depth at an arbitrary depth <i>d</i>; for paths longer than <i>d</i>, this would never find a solution. For paths shorter than <i>d</i>, this would reduce search time by avoiding any searches longer than necessary.</li>
 </ul>
 
 Bidirectional Search: Search from both start and end words, eliminating search through mid-depth paths that won't result in goal state.
