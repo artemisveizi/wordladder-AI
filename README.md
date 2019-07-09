@@ -1,9 +1,9 @@
 # wordladder-AI
-Word Ladder is a word game in which a player essentially computes the [Levenshtein distance](https://en.wikipedia.org/wiki/Levenshtein_distance "Wikipedia: Levenshtein distance") distance between two words, with the constraint that all intermediary words must also be words (ant --> aat --> cat is not permitted, as "aat" is not a word). 
-This computes the word ladder distance between pairs of 6-letter words in a given dictionary. From the classic game, invented by Lewis Carroll:</br>
-  rip --> rap</br>
-  rap --> tap</br>
-  tap --> tar</br>
+Word Ladder is a word game in which a player essentially computes a modified [Levenshtein distance](https://en.wikipedia.org/wiki/Levenshtein_distance "Wikipedia: Levenshtein distance") distance between two words, with the constraint that all intermediary words must also be words (for example, ant --> aat --> cat is not permitted, as "aat" is not a word); this distance is known as the word ladder distance. 
+This python code computes the word ladder distance between pairs of 6-letter words in a given dictionary. From the classic game, invented by Lewis Carroll:</br>
+ (0) rip --> rap</br>
+ (1) rap --> tap</br>
+ (2) tap --> tar</br>
 So, the word ladder distance between rip and tar is 2.
 
 ### Example six-letter word paths:
